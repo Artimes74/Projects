@@ -5,7 +5,7 @@ import {
   createStackNavigator,
 } from '@react-navigation/stack';
 import Main from '../screens/main/main';
-import ParallaxEffectList from '../screens/ParallexEffectList/parallexEffecList';
+import ParallaxEffectList from '../screens/ParallaxEffectList/parallaxEffecList';
 
 export type mainStackParams = {
   main: undefined;

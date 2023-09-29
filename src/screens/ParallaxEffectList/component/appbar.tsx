@@ -3,7 +3,7 @@ import React from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {mainStackParams} from '../../../routes/stack';
 import {StackNavigationProp} from '@react-navigation/stack';
-import {iconProps} from '../../../utils/type/parallexEffectList/parallexEffectListType';
+import {iconProps} from '../../../utils/type/parallaxEffectList/parallaxEffectListType';
 import {Path, Svg} from 'react-native-svg';
 
 const {width, height} = Dimensions.get('screen');

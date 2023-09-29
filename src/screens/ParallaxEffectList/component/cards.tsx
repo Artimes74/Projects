@@ -1,6 +1,6 @@
 import {Dimensions, StyleSheet, View} from 'react-native';
 import React from 'react';
-import {cardsProps} from '../../../utils/type/parallexEffectList/parallexEffectListType';
+import {cardsProps} from '../../../utils/type/parallaxEffectList/parallaxEffectListType';
 import Animated, {
   interpolate,
   useAnimatedStyle,

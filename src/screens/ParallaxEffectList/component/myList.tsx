@@ -1,5 +1,5 @@
 import Animated, {useAnimatedScrollHandler} from 'react-native-reanimated';
-import {myListProps} from '../../../utils/type/parallexEffectList/parallexEffectListType';
+import {myListProps} from '../../../utils/type/parallaxEffectList/parallaxEffectListType';
 import {Dimensions, View} from 'react-native';
 import Cards from './cards';
 
