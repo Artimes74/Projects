@@ -1,19 +1,12 @@
-import {Dimensions, Pressable, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import {Dimensions, Pressable, StyleSheet, Text, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import {mainStackParams} from '../../../routes/stack';
-import {StackNavigationProp} from '@react-navigation/stack';
-import {iconProps} from '../../../utils/type/parallaxEffectList/parallaxEffectListType';
 import {Path, Svg} from 'react-native-svg';
 
 const {width, height} = Dimensions.get('screen');
 
 const AppBar = () => {
-  type navigationType = StackNavigationProp<
-    mainStackParams,
-    'parallaxEffectList'
-  >;
-  const navigation = useNavigation<navigationType>();
+  const navigation = useNavigation();
   return (
     <View style={styles.appBar}>
       <Pressable
@@ -28,7 +21,7 @@ const AppBar = () => {
   );
 };
 
-const BackIcon: React.FC<iconProps> = props => {
+const BackIcon = props => {
   const {width, height, color} = props;
   return (
     <Svg width={width} height={height} viewBox={`0 0 24 24`} fill="none">

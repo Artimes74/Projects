@@ -5,22 +5,15 @@ import {
   createStackNavigator,
 } from '@react-navigation/stack';
 import Main from '../screens/main/main';
-import ParallaxEffectList from '../screens/ParallaxEffectList/parallaxEffecList';
+import ParallaxEffectList from '../screens/parallaxEffectList/parallaxEffectList';
 
-export type mainStackParams = {
-  main: undefined;
-  parallaxEffectList: undefined;
-};
+const Stack = createStackNavigator();
 
-const Stack = createStackNavigator<mainStackParams>();
-
-const SCREEN_OPTION:
-  | StackNavigationOptions
-  | ((props: {route: RouteProp<mainStackParams>}) => any) = {
+const SCREEN_OPTION = {
   headerShown: false,
 };
 
-const MainStackNavigator = () => {
+const JavaScriptStackNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={SCREEN_OPTION}>
@@ -34,4 +27,4 @@ const MainStackNavigator = () => {
   );
 };
 
-export default MainStackNavigator;
+export default JavaScriptStackNavigator;

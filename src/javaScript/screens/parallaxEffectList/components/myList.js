@@ -1,12 +1,12 @@
-import Animated, {useAnimatedScrollHandler} from 'react-native-reanimated';
-import {myListProps} from '../../../utils/type/parallaxEffectList/parallaxEffectListType';
-import {Dimensions, View} from 'react-native';
+import React from 'react';
+import {Dimensions, StyleSheet, View} from 'react-native';
 import Cards from './cards';
+import Animated, {useAnimatedScrollHandler} from 'react-native-reanimated';
 
 const {width, height} = Dimensions.get('screen');
 const ITEM_CONTAINER = width * 0.85;
 
-const MyList = (props: myListProps) => {
+const MyList = props => {
   const {data, translateX} = props;
 
   const onScrollHandler = useAnimatedScrollHandler(event => {
@@ -38,3 +38,5 @@ const MyList = (props: myListProps) => {
 };
 
 export default MyList;
+
+const styles = StyleSheet.create({});

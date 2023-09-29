@@ -1,22 +1,16 @@
 import React from 'react';
-import {
-  Dimensions,
-  ImageSourcePropType,
-  SafeAreaView,
-  StyleSheet,
-  View,
-} from 'react-native';
-import {SharedValue, useSharedValue} from 'react-native-reanimated';
-import AppBar from './component/appbar';
-import MyList from './component/myList';
+import {Dimensions, SafeAreaView, StyleSheet, View} from 'react-native';
+import AppBar from './components/appbar';
+import MyList from './components/myList';
+import {useSharedValue} from 'react-native-reanimated';
 // @ts-ignore
-import BeachImage from '../../assets/images/parallexEffectListImages/beach.jpeg';
+import BeachImage from '../../../assets/images/parallaxEffectListImages/beach.jpeg';
 // @ts-ignore
-import HotelImage from '../../assets/images/parallexEffectListImages/hotel.jpeg';
+import HotelImage from '../../../assets/images/parallaxEffectListImages/hotel.jpeg';
 // @ts-ignore
-import IslandImage from '../../assets/images/parallexEffectListImages/island.jpeg';
+import IslandImage from '../../../assets/images/parallaxEffectListImages/island.jpeg';
 // @ts-ignore
-import Ski from '../../assets/images/parallexEffectListImages/ski.jpeg';
+import Ski from '../../../assets/images/parallaxEffectListImages/ski.jpeg';
 
 const {width, height} = Dimensions.get('screen');
 
@@ -24,17 +18,7 @@ const ParallaxEffectList = () => {
   const translateX = useSharedValue(0);
   // const ITEM_WIDTH = width * 0.85;
   // const ITEM_HEIGHT = width * 0.85;
-  const [data] = React.useState<
-    {
-      id: number;
-      // image: string;
-      image: ImageSourcePropType | SharedValue<ImageSourcePropType>;
-      ref: React.RefObject<any>;
-      name: string;
-      description: string;
-      color: string;
-    }[]
-  >([
+  const [data] = React.useState([
     {
       id: 0,
       // image: `https://images.pexels.com/photos/2607113/pexels-photo-2607113.jpeg?auto=compress&cs=tinysrgb&w=${

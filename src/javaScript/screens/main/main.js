@@ -1,14 +1,10 @@
-import {Pressable, SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {StackNavigationProp} from '@react-navigation/stack';
-
+import {Pressable, SafeAreaView, StyleSheet, Text} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import {mainStackParams} from '../../routes/stack';
-import {SPACING} from '../../utils/constant/constant';
+import {Spacing} from '../../../utils/constant/constant';
 
-const Main = () => {
-  type navigationType = StackNavigationProp<mainStackParams, 'main'>;
-  const navigation = useNavigation<navigationType>();
+export default function Main() {
+  const navigation = useNavigation();
   const onPress = () => {
     navigation.navigate('parallaxEffectList');
   };
@@ -19,9 +15,7 @@ const Main = () => {
       </Pressable>
     </SafeAreaView>
   );
-};
-
-export default Main;
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -31,7 +25,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttons: {
-    marginVertical: SPACING,
+    marginVertical: Spacing,
   },
   buttonText: {
     color: 'blue',

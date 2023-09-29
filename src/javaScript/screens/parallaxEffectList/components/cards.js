@@ -1,6 +1,5 @@
-import {Dimensions, StyleSheet, View} from 'react-native';
+import {Dimensions, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {cardsProps} from '../../../utils/type/parallaxEffectList/parallaxEffectListType';
 import Animated, {
   interpolate,
   useAnimatedStyle,
@@ -26,7 +25,7 @@ const SPRING_CONFIG = {
   stiffness: 500,
 };
 
-const Cards: React.FC<cardsProps> = props => {
+const Cards = props => {
   const {item, index, translateX} = props;
 
   const imageAnimatedStyle = useAnimatedStyle(() => {
