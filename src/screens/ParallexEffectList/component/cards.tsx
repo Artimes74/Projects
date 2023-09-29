@@ -1,4 +1,4 @@
-import {Dimensions, StyleSheet, Text, View} from 'react-native';
+import {Dimensions, StyleSheet, View} from 'react-native';
 import React from 'react';
 import {cardsProps} from '../../../utils/type/parallexEffectList/parallexEffectListType';
 import Animated, {
@@ -80,9 +80,11 @@ const Cards: React.FC<cardsProps> = props => {
       ]}>
       <Animated.View key={item.id} style={[styles.card]}>
         <Animated.Image
-          source={{uri: item.image}}
+          // if you want to import link just add inside the data and then uncomment first part and comment second part
+          // source={{uri: item.image}}
+          source={item.image}
           resizeMethod={'resize'}
-          resizeMode={'contain'}
+          resizeMode={'center'}
           style={[styles.images, imageAnimatedStyle]}
         />
         <Animated.Text style={[styles.name, AnimatedText, {color: item.color}]}>

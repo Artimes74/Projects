@@ -1,9 +1,10 @@
+import {ImageSourcePropType} from 'react-native';
 import {SharedValue} from 'react-native-reanimated';
 
 export type myListProps = {
   data: {
     id: number;
-    image: string;
+    image: ImageSourcePropType | SharedValue<ImageSourcePropType>;
     ref: React.RefObject<any>;
     name: string;
     description: string;
@@ -15,7 +16,7 @@ export type myListProps = {
 export type cardsProps = {
   item: {
     id: number;
-    image: string;
+    image: ImageSourcePropType | SharedValue<ImageSourcePropType>;
     ref: React.RefObject<any>;
     name: string;
     description: string;
