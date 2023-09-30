@@ -6,10 +6,12 @@ import {
 } from '@react-navigation/stack';
 import Main from '../screens/main/main';
 import ParallaxEffectList from '../screens/ParallaxEffectList/parallaxEffecList';
+import BottomNavigation from '../screens/bottomNavigation/bottomNavigation';
 
 export type mainStackParams = {
   main: undefined;
   parallaxEffectList: undefined;
+  bottomNavigation: undefined;
 };
 
 const Stack = createStackNavigator<mainStackParams>();
@@ -29,6 +31,7 @@ const TypeScriptStackNavigator = () => {
           name="parallaxEffectList"
           component={ParallaxEffectList}
         />
+        <Stack.Screen name="bottomNavigation" component={BottomNavigation} />
       </Stack.Navigator>
     </NavigationContainer>
   );
