@@ -4,7 +4,7 @@ import {Dimensions, View} from 'react-native';
 import Cards from './cards';
 
 const {width, height} = Dimensions.get('screen');
-const ITEM_CONTAINER = width * 0.85;
+const ITEM_CONTAINER = width * 0.8;
 
 const MyList = (props: myListProps) => {
   const {data, translateX} = props;

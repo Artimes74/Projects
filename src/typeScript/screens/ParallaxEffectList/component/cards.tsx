@@ -8,7 +8,7 @@ import Animated, {
 } from 'react-native-reanimated';
 
 const {width, height} = Dimensions.get('screen');
-const ITEM_CONTAINER = width * 0.85;
+const ITEM_CONTAINER = width * 0.8;
 const ITEM_WIDTH = width * 0.7;
 const ITEM_HEIGHT = height * 0.5;
 const SHADOW_CONFIG = {
