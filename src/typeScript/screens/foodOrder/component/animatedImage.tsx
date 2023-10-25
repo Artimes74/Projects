@@ -32,6 +32,11 @@ const AnimatedImage = (props: Props) => {
         right: -width / 2.6,
         zIndex: 8,
         borderRadius: width / 2,
+        elevation: 4,
+        // shadowColor: 'rgba(0,0,0,.7)',
+        // shadowRadius: 10,
+        // shadowOpacity: 1,
+        // shadowOffset: {width: 0, height: 10},
       }}>
       <SharedElement id={`img${index}`}>
         <Image
